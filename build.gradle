@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+    flatDir {
+        dir "${projectDir}/libs/"
+    }
+}
+
+dependencies {
+    implementation group: "com.ultreon", name: "bubbles", version: "0.0.2169-indev3"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+compileJava {
+    doFirst {
+        mkdir "${projectDir}/run/"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
