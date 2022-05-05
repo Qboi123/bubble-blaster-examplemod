@@ -2,6 +2,7 @@
 Basic usage of the [Bubble Blaster](https://github.com/Ultreon/bubble-blaster) API.
 
 ## Prepare running
+*For intelliJ the run configuration is already included in the repo.*
  * Create a new run configuration, with `com.ulreon.dev.GameDevMain`,  
    and use `gameDir=.` as arguments and use `run` in the project root directory as working directory.  
    Use this as environment variables: `DEV_CLASS_PATH=../build/resources/main;../build/classes/java`.
